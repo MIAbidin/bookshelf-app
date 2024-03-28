@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+    <main>
+        <div class="banner">
+            <div class="logo">
+                <p>Book<span>Shelf</span></p>
+            </div>
+            <div class="text">
+                <h1>Dapatkan Inspirasi yang Tak Terbatas dari <span>Dunia Tulisan!</span></h1>
+            </div>
+            <div id="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <span id="search-icon" class="fas fa-search"></span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="col-left">
+                <div class="circle-wrapper">
+                    <div class="circle complete">
+                        <p>0</p>
+                        <span>Complete</span>
+                    </div>
+                    <button class="circle add-button" id="addButton">+</button>
+                    <div class="circle incomplete">
+                        <p>0</p>
+                        <span>Incomplete</span>
+                    </div>
+                </div>
+
+                <div class="genre-box">
+                    <p>Genre:</p>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="completed-books">
+                    <h2>Completed Books</h2>
+                    <div class="row-completed"></div>
+                </div>
+
+                <div class="incompleted-books">
+                    <h2>Incompleted Books</h2>
+                    <div class="row-incompleted"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Data Entry</h2>
+                <form id="bookForm">
+                    <label for="title">Judul:</label><br>
+                    <input type="text" id="title" name="title" required><br>
+                    <label for="author">Penulis:</label><br>
+                    <input type="text" id="author" name="author" required><br>
+                    <label for="year">Tahun:</label><br>
+                    <input type="number" id="year" name="year" required><br>
+                    <label for="genre">Genre:</label><br>
+                    <input type="text" id="genre" name="genre" required><br>
+                    <input type="checkbox" id="completed" name="completed">
+                    <label for="completed">Selesai</label><br>
+                    <label for="image">Upload Image:</label><br>
+                    <input type="file" id="image" name="image" accept="image/*"><br>
+                    <img id="image-preview" src="#" alt="Preview" style="display: none;">
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="editModal">
+            <div class="modal-content">
+                <span class="close" id="edit-close">&times;</span>
+                <h2>Edit Book</h2>
+                <form id="edit-bookForm">
+                    <label for="edit-title">Judul:</label><br>
+                    <input type="text" id="edit-title" name="title" required><br>
+                    <label for="edit-author">Penulis:</label><br>
+                    <input type="text" id="edit-author" name="author" required><br>
+                    <label for="edit-year">Tahun:</label><br>
+                    <input type="number" id="edit-year" name="year" required><br>
+                    <label for="edit-genre">Genre:</label><br>
+                    <input type="text" id="edit-genre" name="genre" required><br>
+                    <input type="checkbox" id="edit-completed" name="completed">
+                    <label for="edit-completed">Selesai</label><br>
+                    <label for="edit-image">Upload Image:</label><br>
+                    <input type="file" id="edit-image" name="image" accept="image/*"><br>
+                    <img id="edit-image-preview" src="#" alt="Preview" style="display: none;"><br>
+                    <button type="button" id="edit-save">Simpan</button>
+                </form>
+                
+            </div>
+        </div>
+        
+
+        <div id="deleteConfirmationModal" class="modal">
+            <div class="modal-content">
+              <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+              <button id="confirmDeleteButton">Ya</button>
+              <button id="cancelDeleteButton">Tidak</button>
+            </div>
+          </div>
+          
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

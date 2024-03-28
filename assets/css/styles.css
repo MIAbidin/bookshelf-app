@@ -1,0 +1,431 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    height: 300px;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+.logo span {
+    font-weight: bolder;
+}
+
+.banner h1 {
+    position: relative;
+    font-size: 24px;
+    color: white;
+}
+
+#search-bar {
+    margin-top: 100px; 
+    position: absolute;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #666;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.col-left {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.col-right {
+    flex: 3;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+
+}
+
+.completed-books,
+.incompleted-books {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.incompleted-books {
+    border-left: 2px solid #686666;
+}
+
+.completed-books h2,
+.incompleted-books h2 {
+    margin-top: 0;
+}
+
+.circle-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.add-button {
+    width: 120px;
+    height: 120px;
+    font-size: 50px;
+    border: none;
+    background-color: #ff9800;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #ac6905;
+    font-size: 70px;
+}
+
+.circle p {
+    font-size: 40px;
+    margin: 0;
+}
+
+
+.circle span {
+    color: black;
+    font-size: 14px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle.incomplete {
+    background-color: rgb(235, 235, 60);
+}
+
+.genre-box {
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px
+}
+
+.genre-box p {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.genre-box ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.genre-box ul li {
+    margin-bottom: 5px;
+    color: #666;
+    cursor: pointer;
+}
+
+.genre-box ul li:hover {
+    color: #000;
+}
+.book-row {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.book-info {
+    width: 150px;
+    height: 170px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-info img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.book-details {
+    margin-left: 20px;
+}
+
+.book-details h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
+.book-details p {
+    margin-bottom: -5px;
+}
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin-right: 10px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.change-button {
+    background-color: #45a049;
+}
+
+.change-button:hover {
+    background-color: darkgreen;
+}
+
+.edit-button {
+    background-color: #3498db;
+}
+
+.edit-button:hover {
+    background-color: #2980b9;
+}
+.delete-button {
+    background-color: red;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+#deleteConfirmationModal button {
+    color: white;
+    border: none;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+#confirmDeleteButton {
+    background-color: #4CAF50;
+}
+
+#confirmDeleteButton:hover {
+    background-color: #45a049;
+}
+
+#cancelDeleteButton {
+    background-color: red;
+}
+
+#cancelDeleteButton:hover {
+    background-color: darkred;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+}
+  
+#edit-save {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    margin-top: 20px;
+}
+  
+#edit-save:hover {
+    background-color: #45a049;
+}
+
+#submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    margin-top: 20px;
+}
+  
+#submit:hover {
+    background-color: #45a049;
+}
+
+@media only screen and (max-width: 768px) {
+    .banner {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .text span {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    #search-input {
+        width: 300px;
+    }
+    
+    .content {
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-left {
+        width: 75%;
+        margin-top: -15px;
+    }
+
+    .col-right {
+        flex-wrap: wrap;
+    }
+    .incompleted-books, .completed-books {
+        width: 100%;
+    }
+
+    .incompleted-books {
+        padding-top: 15px;
+        border-left: none;
+        border-top: 2px solid #686666;
+    }
+    .book-row {
+        justify-content: center;
+    }
+
+    .genre-box {
+        margin-bottom: 15px;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}
